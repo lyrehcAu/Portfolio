@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff9ec;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: #973c00;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    background-image: linear-gradient(to right, #e3903c, #e80006);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-sizing: border-box;
+}
+
+header.scrolled {
+    background-color: #fffffe;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #e47004, #e90910);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #fae284, #fdd7a8);
+    color: #c46215;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.10);
+    color: #f65d11;
+}
+
+/* MAIN #f4e4c0*/
+/* HOME */
+#home {
+    padding-top: 70px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.home-title {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.home-subtitle {
+    margin: 20px 0px 0px 0px;
+    font-size: 1.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+}
+
+.learn-more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background-image: linear-gradient(to right, #fe9901, #fb2d36);
+    font-size: 1.25rem;
+    height: 7vh;
+    width: 17%;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+
+    position: relative; /* relative jadi wadah untuk absolute */
+    overflow: hidden;   /* tidak tumpah ke luar button */
+}
+
+.learn-more-button a {
+  position: relative; /* untuk pake z */
+  z-index: 2; /* lebih tinggi */
+}
+
+.learn-more-button:hover{
+    transform: scale(1.10);
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 1.1rem; /* ukuran sparkle */
+    animation: sparkle-animation 2s forwards;
+    z-index: 1; /* lebih rendah */
+}
+
+/* animasi sparkle */
+@keyframes sparkle-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+.about-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.about-box img{
+    height: 400px;
+    width: auto;
+}
+
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #fe9901, #fb2d36);
+    font-size: 1.4rem;
+    height: 7vh;
+    width: 12%;
+    border-radius: 25px;
+}
+
+.button img {
+    margin-right: 10px;
+    height: 30px;
+    width: auto;
+}
+
