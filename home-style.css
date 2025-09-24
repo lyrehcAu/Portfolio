@@ -174,13 +174,13 @@ nav a:hover {
   }
 }
 
-#about, #skills{
+#about, #skills, #projects{
     display: flex;
     min-height: 70vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30vh;
+    margin-bottom: 10vh;
 }
 
 .section-title {
@@ -204,6 +204,10 @@ nav a:hover {
     height: 300px;
     width: auto;
     border-radius: 30px;
+}
+
+.my-pic {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-me {
@@ -236,7 +240,7 @@ nav a:hover {
     width: auto;
 }
 
-.skills-container {
+.container {
     margin-top: 20px;
     width: 100%;
     max-width: 1220px;
@@ -332,4 +336,226 @@ nav a:hover {
 
 .tech-item span {
     font-weight: 600;
+}
+
+/* Base Project Card Styling */
+.project-card {
+    display: flex; /* Use flexbox for the main image/details layout */
+    /* background-color: #fcf6eb; Lighter background for the card */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); */
+    /* overflow: hidden; Ensures rounded corners are respected */
+    margin-bottom: 60px; /* Space between cards */
+    align-items: center; /* Vertically align items in the card */
+}
+
+.project-card:last-child {
+    margin-bottom: 0; /* No margin after the last card */
+}
+
+/* Project Image Wrapper */
+.project-image-wrapper {
+    flex: 1; /* Takes up equal space as project details */
+    position: relative;
+    padding: 30px; /* Padding inside the wrapper to shrink the image */
+    background-color: #f9e1b8; /* Background color around the image */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px; /* Rounded corners for the wrapper */
+    overflow: hidden;
+}
+
+.project-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Slightly more rounded image corners */
+    filter: brightness(0.9); /* Subtle dimming for the overlay */
+}
+
+/* Add this animation to your stylesheet */
+@keyframes sway {
+  0% {
+    transform: rotate(2deg);
+    transform: scale(1.10);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+    transform: scale(1.10);
+  }
+}
+
+/* Update your existing .badge class to include the animation */
+.badge {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: #fe9901;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  
+  /* Add this line to apply the animation */
+  animation: sway 3s ease-in-out infinite;
+}
+
+/* Project Details (Text Content) */
+.project-details {
+    flex: 1; /* Takes up equal space as project image */
+    padding: 30px 40px; /* Padding inside the text content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-details .project-category {
+    font-size: 0.9rem;
+    color: #e47004; /* Orange color for category */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-details h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #973c00; /* Dark brown from your theme */
+}
+
+.project-details p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #bb4d00; /* Slightly darker text for body */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tech Stack Pills */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tech-pill {
+    /* background-color: #fdd7a8; Light orange from your theme */
+    border: 2px solid #ffd230;
+    color: #c46215;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    white-space: nowrap; /* Prevent pills from breaking */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Project Action Buttons */
+.project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Base styles for BOTH buttons in this section */
+.project-actions .button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.project-actions .button img {
+    height: 20px;
+    width: 20px;
+    margin-right: 0;
+}
+
+/* FIX: Renamed to '.button-primary' to match your HTML */
+.project-actions .button.first {
+    background-image: linear-gradient(to right, #fe9901, #fb2d36);
+    color: white;
+}
+
+/* FIX: Changed 'background-image' to 'background-color' */
+.project-actions .button.secondary {
+    background-image: none; /* <-- THE FIX: Remove the inherited gradient */
+    background-color: #fff; /* Set the solid white background */
+    border: 2px solid #ffd230;
+    color: #c46215;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.project-actions .button.secondary:hover {
+    background-color: #fcf6eb;
+    transform: translateY(-2px);
+}
+
+/* Reverse Layout for alternating cards */
+.project-card.reverse {
+    flex-direction: row-reverse; /* Flips the order of image and details */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .project-card {
+        flex-direction: column; /* Stack image and details vertically */
+        text-align: center;
+    }
+
+    .project-card.reverse {
+        flex-direction: column; /* Ensure reversed cards also stack correctly */
+    }
+
+    .project-image-wrapper,
+    .project-details {
+        padding: 25px; /* Adjust padding for smaller screens */
+    }
+
+    .project-details {
+        align-items: center; /* Center text content when stacked */
+    }
+
+    .project-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-actions {
+        justify-content: center; /* Center buttons when stacked */
+    }
+
+    .badge {
+        top: 20px;
+        right: 20px;
+    }
+
+    .badge.category-icon {
+        left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        margin-bottom: 40px;
+    }
+    .project-details h3 {
+        font-size: 1.5rem;
+    }
+    .project-details p {
+        font-size: 1rem;
+    }
+    .project-actions {
+        flex-direction: column; /* Stack buttons on very small screens */
+        gap: 10px;
+    }
+    .project-actions .button {
+        width: 100%; /* Make buttons full width */
+    }
 }
