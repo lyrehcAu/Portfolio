@@ -65,7 +65,7 @@ nav a {
     background-image: linear-gradient(to right, #fae284, #fdd7a8);
     color: #c46215;
     font-weight: 100;
-    font-size: 14px;
+    font-size: clamp(14px, 1.5vw, 16px);
     padding: 10px 20px;
     border-radius: 25px;
     transition: transform 0.2s ease;
@@ -77,9 +77,12 @@ nav a:hover {
 }
 
 /* MAIN #f4e4c0*/
+
 /* HOME */
 #home {
+    background-color: #f9e1b8;
     padding-top: 70px;
+    /* margin-bottom: px; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -90,7 +93,7 @@ nav a:hover {
 }
 
 .home-title {
-    font-size: 6rem;
+    font-size: clamp(3.5rem, 8vw, 6rem);
     margin: 0;
 }
 
@@ -112,7 +115,7 @@ nav a:hover {
     font-size: 1.25rem;
     height: 7vh;
     width: 17%;
-    border-radius: 25px;
+    border-radius: 50px;
     transition: transform 0.2s ease;
 
     position: relative; /* relative jadi wadah untuk absolute */
@@ -155,29 +158,50 @@ nav a:hover {
     text-align: center;
     font-size: 3rem;
     font-weight: lighter;
+    margin-bottom: 0px;
 }
 
-.about-box img{
+.about-box {
+    display: flex;
+    align-items: center;
+    margin: 0px 150px 0px 150px;
     height: 400px;
     width: auto;
+    border-radius: 30px;
 }
 
+.about-box img {
+    height: 300px;
+    width: auto;
+    border-radius: 30px;
+}
 
+.about-me {
+    margin-left: 50px;
+}
 
+.about-me p {
+    font-size: clamp(1rem, 1vw, 1.1rem);
+    line-height: 2;
+}
 
 .button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to right, #fe9901, #fb2d36);
-    font-size: 1.4rem;
-    height: 7vh;
-    width: 12%;
-    border-radius: 25px;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
 }
 
 .button img {
-    margin-right: 10px;
+    padding-right: 10px;
     height: 30px;
     width: auto;
 }
