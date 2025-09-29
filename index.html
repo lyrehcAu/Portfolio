@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheryl's Portfolio</title>
-    <link rel="stylesheet" href="home-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#home">Logo:)</a>
+            <a href="#home">CherylAu</a>
         </div>
         <nav>
             <a href="#home">Home</a>
@@ -143,7 +144,7 @@
                                 <img src="Assets/pop.png" alt="pop"> View Project
                             </a>
                             <a href="https://github.com/lyrehcAu/Diamond-Cut-Motors-Project" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub 2.png" alt="GitHub icon"> Source Code
+                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
                             </a>
                         </div>
                     </div>
@@ -161,7 +162,7 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/lyrehcAu/ANCARE-UIUX/tree/main" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub 2.png" alt="GitHub icon"> Source Code
+                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
                             </a>
                         </div>
                     </div>
@@ -190,7 +191,7 @@
                                 <img src="Assets/pop.png" alt="pop"> View Project
                             </a>
                             <a href="https://github.com/lyrehcAu/Heart-Disease-Prediction-Streamlit" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub 2.png" alt="GitHub icon"> Source Code
+                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
                             </a>
                         </div>
                     </div>
@@ -212,7 +213,7 @@
                                 <img src="Assets/pop.png" alt="pop"> View Project
                             </a>
                             <a href="https://github.com/Zaneforce/NextStep" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub 2.png" alt="GitHub icon"> Source Code
+                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
                             </a>
                         </div>
                     </div>
@@ -227,8 +228,74 @@
             
         </section>
         <section id="contact">
-            <a class="button" href="https://www.linkedin.com/in/cherylaureliachristy/" target="_blank"><img src="Assets/linkedin-logo.png" alt="LinkedIn Logo">LinkedIn</a>
+            <div class="contact-header">
+                <div class="contact-logo">
+                    <span>✉️</span>
+                </div>
+                <h1 class="section-title">Let's Connect</h1>
+                <p>Ready to see your project come to life? Let's connect and create something that makes an impact.</p>
+            </div>
 
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h2>Share Your Vision</h2>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's the topic?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Story</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project and how I can help..."></textarea>
+                        </div>
+                        <button type="submit" class="button">Send Your Message ➔</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Other Paths</h2>
+                    <p>Choose the connection that feels most natural.</p>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <a href="mailto:cheryl@example.com">cheryl@example.com</a>
+                            <p>Let your ideas fall gently into my inbox</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                         <div class="info-icon">
+                            <img src="Assets/linkedin-logo.png" alt="LinkedIn Logo">
+                        </div>
+                        <div class="info-text">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/cherylaureliachristy/" target="_blank">Cheryl Aurelia Christy</a>
+                             <p>Connect with me professionally</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Location</h3>
+                            <span>Tangerang, Banten, Indonesia</span>
+                            <p>Where seasonal inspiration takes root</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
