@@ -21,7 +21,8 @@ function createLeaf() {
 
 // Keep generating leaves
 setInterval(createLeaf, 500);
-const header = document.querySelector('header');
+
+const header = document.querySelector('.header-box');
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
         header.classList.add('scrolled'); // tambah class scrolled kalo scrolllewat 50px -> triger ke css
@@ -54,4 +55,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start observing the skills section
   observer.observe(skillsSection);
+});
+
+const menuToggle = document.getElementById('menu');
+const navbar = document.getElementById('navbar');
+
+menuToggle.addEventListener('click', () =>{
+  navbar.classList.toggle('active');
+  
+    const icon = menu.querySelector('img');
+  if (nav.classList.contains('active')) {
+    icon.src = 'Assets/close.png'; // icon x
+  } else {
+    icon.src = 'Assets/menu.png';
+  }
+});
+
+// Close menu automatically when clicking any nav link
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+    menu.querySelector('img').src = 'Assets/menu.png';
+  });
 });

@@ -33,9 +33,6 @@ h1 {
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px 150px;
     position: fixed;
     width: 100%;
@@ -47,9 +44,22 @@ header {
     box-sizing: border-box;
 }
 
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-box.scrolled {
+    /* background-color: #fffffe; */
+    width: fit-content;
+    backdrop-filter: blur(10px);
+}
+
 header.scrolled {
-    background-color: #fffffe;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    /* background-color: #fffffe;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); */
 }
 
 .logo a {
@@ -70,7 +80,7 @@ nav {
 
 nav a {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: transparent;
     color: #c46215;
@@ -84,6 +94,15 @@ nav a {
 nav a:hover {
     transform: scale(1.10);
     color: #f65d11;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu img {
+    width: 35px;
 }
 
 /* MAIN #f4e4c0*/
@@ -203,6 +222,7 @@ nav a:hover {
     border-radius: 50px;
     transition: transform 0.2s ease;
     color: #fff9ec;;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -221,27 +241,25 @@ nav a:hover {
     max-width: 1220px;
 }
 
-/* Updated .skill container */
 .skill {
-    margin-bottom: 10px; /* Increased space between each skill entry */
+    margin-bottom: 10px;
 }
 
-/* New container for the name and bar */
 .skill-main {
-    display: flex; /* Aligns items in a row */
-    align-items: center; /* Vertically centers them */
-    gap: 20px; /* Space between the name and the bar */
-    margin-bottom: 10px; /* Space between the bar and the explanation below it */
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .skill-name {
     font-weight: 600;
-    white-space: nowrap; /* Prevents the name from wrapping to a new line */
-    flex-basis: 200px; /* Gives the name a fixed base width */
+    white-space: nowrap;
+    width: 250px;
+    flex-shrink: 0;
 }
 
 .skill-bar {
-    flex-grow: 1; /* Allows the bar to take up all remaining space */
+    flex-grow: 1;
     height: 15px;
     background-color: #fdd7a8;
     border-radius: 50px;
@@ -256,19 +274,18 @@ nav a:hover {
     transition: width 1.5s ease-in-out; 
 }
 
-/* New style for the explanation text */
 .skill-explanation {
-    margin-left: 220px; /* Aligns it under the start of the skill bar */
+    margin-left: 270px;
     font-size: 0.9rem;
     line-height: 1.5;
-    opacity: 0.8; /* Makes it slightly less prominent */
+    opacity: 0.8;
+    margin-top: 5px;
 }
 
-/* Container for the technical skills section */
 .tech-skills {
     margin-top: 50px;
     padding-top: 30px;
-    border-top: 1px solid #e0c9a6; /* A light separator line */
+    border-top: 1px solid #e0c9a6;
 }
 
 .tech-skills h3 {
@@ -277,15 +294,12 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* The grid container */
 .tech-grid {
     display: grid;
-    /* This creates a responsive grid that makes as many columns as can fit */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
 }
 
-/* Individual skill item in the grid */
 .tech-item {
     display: flex;
     flex-direction: column;
@@ -313,29 +327,23 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* Base Project Card Styling */
 .project-card {
-    display: flex; /* Use flexbox for the main image/details layout */
-    /* background-color: #fcf6eb; Lighter background for the card */
-    /* border-radius: 20px; */
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); */
-    /* overflow: hidden; Ensures rounded corners are respected */
-    margin-bottom: 60px; /* Space between cards */
-    align-items: center; /* Vertically align items in the card */
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
 }
 
 .project-card:last-child {
-    margin-bottom: 0; /* No margin after the last card */
+    margin-bottom: 0;
 }
 
-/* Project Image Wrapper */
 .project-image-wrapper {
-    flex: 1; /* Takes up equal space as project details */
+    flex: 1;
     position: relative;
-    padding: 30px; /* Padding inside the wrapper to shrink the image */
-    background-color: #f9e1b8; /* Background color around the image */
+    padding: 30px; 
+    background-color: #f9e1b8;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 20px; /* Rounded corners for the wrapper */
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -343,11 +351,10 @@ nav a:hover {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 15px; /* Slightly more rounded image corners */
-    filter: brightness(0.9); /* Subtle dimming for the overlay */
+    border-radius: 15px;
+    filter: brightness(0.9);
 }
 
-/* Update your existing .badge class to include the animation */
 .badge {
   position: absolute;
   top: 50px;
@@ -359,14 +366,12 @@ nav a:hover {
   font-size: 0.85rem;
   font-weight: 600;
   
-  /* Add this line to apply the animation */
   animation: sway 3s ease-in-out infinite;
 }
 
-/* Project Details (Text Content) */
 .project-details {
-    flex: 1; /* Takes up equal space as project image */
-    padding: 30px 40px; /* Padding inside the text content */
+    flex: 1;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -374,7 +379,7 @@ nav a:hover {
 
 .project-details .project-category {
     font-size: 0.9rem;
-    color: #e47004; /* Orange color for category */
+    color: #e47004;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -382,18 +387,17 @@ nav a:hover {
 .project-details h3 {
     font-size: 2rem;
     margin: 0;
-    color: #973c00; /* Dark brown from your theme */
+    color: #973c00; 
 }
 
 .project-details p {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #bb4d00; /* Slightly darker text for body */
+    color: #bb4d00;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Tech Stack Pills */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -402,17 +406,15 @@ nav a:hover {
 }
 
 .tech-pill {
-    /* background-color: #fdd7a8; Light orange from your theme */
     border: 2px solid #ffd230;
     color: #c46215;
     padding: 6px 12px;
     border-radius: 15px;
     font-size: 0.85rem;
-    white-space: nowrap; /* Prevent pills from breaking */
+    white-space: nowrap; 
     font-family: 'Poppins', sans-serif;
 }
 
-/* Project Action Buttons */
 .project-actions {
     display: flex;
     gap: 15px;
@@ -420,14 +422,13 @@ nav a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Base styles for BOTH buttons in this section */
 .project-actions .button {
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 30px;
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between icon and text */
+    gap: 8px; 
 }
 
 .project-actions .button img {
@@ -436,16 +437,14 @@ nav a:hover {
     margin-right: 0;
 }
 
-/* FIX: Renamed to '.button-primary' to match your HTML */
 .project-actions .button.first {
     background-image: linear-gradient(to right, #fe9901, #fb2d36);
     color: white;
 }
 
-/* FIX: Changed 'background-image' to 'background-color' */
 .project-actions .button.secondary {
-    background-image: none; /* <-- THE FIX: Remove the inherited gradient */
-    background-color: #fff; /* Set the solid white background */
+    background-image: none;
+    background-color: #fff;
     border: 2px solid #ffd230;
     color: #c46215;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -457,12 +456,10 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Reverse Layout for alternating cards */
 .project-card.reverse {
-    flex-direction: row-reverse; /* Flips the order of image and details */
+    flex-direction: row-reverse; 
 }
 
-/* --- CONTACT SECTION --- */
 #contact {
     display: flex;
     flex-direction: column;
@@ -506,13 +503,12 @@ nav a:hover {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2/3 for form, 1/3 for info */
+    grid-template-columns: 2fr 1fr; 
     gap: 40px;
     width: 100%;
     max-width: 1220px;
 }
 
-/* Contact Form Styling */
 .contact-form {
     background-color: #fff;
     padding: 40px;
@@ -535,7 +531,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    flex: 1; /* Makes form-groups in a row take equal space */
+    flex: 1; 
 }
 
 .form-group label {
@@ -567,10 +563,8 @@ nav a:hover {
     padding: 15px;
     font-size: 1.1rem;
     border: none;
-    cursor: pointer;
 }
 
-/* Contact Info Styling */
 .contact-info > p {
     margin-top: -10px;
     margin-bottom: 25px;
@@ -598,7 +592,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* Prevents icon from shrinking */
+    flex-shrink: 0;
 }
 
 .info-icon img {
@@ -628,74 +622,7 @@ nav a:hover {
     color: #fb2d36;
 }
 
-/* --- Responsive Contact Section --- */
-@media (max-width: 900px) {
-    .contact-container {
-        grid-template-columns: 1fr; /* Stack columns on tablet */
-    }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 900px) {
-    .project-card {
-        flex-direction: column; /* Stack image and details vertically */
-        text-align: center;
-    }
-
-    .project-card.reverse {
-        flex-direction: column; /* Ensure reversed cards also stack correctly */
-    }
-
-    .project-image-wrapper,
-    .project-details {
-        padding: 25px; /* Adjust padding for smaller screens */
-    }
-
-    .project-details {
-        align-items: center; /* Center text content when stacked */
-    }
-
-    .project-details h3 {
-        font-size: 1.8rem;
-    }
-
-    .project-actions {
-        justify-content: center; /* Center buttons when stacked */
-    }
-
-    .badge {
-        top: 20px;
-        right: 20px;
-    }
-
-    .badge.category-icon {
-        left: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .project-card {
-        margin-bottom: 40px;
-    }
-    .project-details h3 {
-        font-size: 1.5rem;
-    }
-    .project-details p {
-        font-size: 1rem;
-    }
-    .project-actions {
-        flex-direction: column; /* Stack buttons on very small screens */
-        gap: 10px;
-    }
-    .project-actions .button {
-        width: 100%; /* Make buttons full width */
-    }
-}
-
+/* animasi daun */
 @keyframes fall {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -707,23 +634,7 @@ nav a:hover {
   }
 }
 
-/* animasi sparkle */
-@keyframes sparkle-animation {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(0deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2) rotate(180deg);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0) rotate(360deg);
-  }
-}
-
-/* Add this animation to your stylesheet */
+/* animasi goyang */
 @keyframes sway {
   0% {
     transform: rotate(2deg) scale(1.10);
