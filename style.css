@@ -753,14 +753,30 @@ nav a:hover {
   }
 
   .project-actions {
+    display: flex;
     justify-content: center;
-    gap: 8px;
+    align-items: center;
+    flex-wrap: nowrap; /* stay on one line */
+    gap: 6px;
+    width: 100%;
   }
 
   .project-actions .button {
-    font-size: 0.8rem;
-    padding: 7px 14px;
-    min-width: 110px;
+    flex: 1;
+    max-width: 130px;
+    font-size: 0.75rem;
+    padding: 7px 0;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .project-actions .button img {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
   }
 }
 
