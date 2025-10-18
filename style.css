@@ -617,7 +617,7 @@ nav a:hover {
 @media (max-width: 600px) {
   html, body {
     font-size: 14px;
-    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-x: hidden;
   }
 
   header {
@@ -635,13 +635,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     width: auto;
-    max-width: 90vw; /* ensure it fits smaller screens */
-    overflow-x: auto; /* allow soft scroll if still tight */
-    scrollbar-width: none; /* hide scrollbar on Firefox */
+    max-width: 90vw; 
+    overflow-x: auto;
+    scrollbar-width: none; 
   }
 
   header::-webkit-scrollbar {
-    display: none; /* hide scrollbar on Safari/Chrome */
+    display: none; 
   }
 
   .logo,
@@ -670,7 +670,6 @@ nav a:hover {
     color: #fb2d36;
   }
 
-  /* Sections */
   #home, #about, #skills, #projects, #contact {
     padding: 60px 15px;
   }
