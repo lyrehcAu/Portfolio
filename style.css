@@ -614,6 +614,151 @@ nav a:hover {
     }
 }
 
+@media (max-width: 600px) {
+  html, body {
+    font-size: 14px;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 249, 236, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 6px 8px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 90vw; /* ensure it fits smaller screens */
+    overflow-x: auto; /* allow soft scroll if still tight */
+    scrollbar-width: none; /* hide scrollbar on Firefox */
+  }
+
+  header::-webkit-scrollbar {
+    display: none; /* hide scrollbar on Safari/Chrome */
+  }
+
+  .logo,
+  .menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  nav a {
+    font-size: 11px;
+    padding: 6px 10px;
+    background-color: transparent;
+    color: #c46215;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+  }
+
+  nav a:hover {
+    background-color: #fdd7a8;
+    color: #fb2d36;
+  }
+
+  /* Sections */
+  #home, #about, #skills, #projects, #contact {
+    padding: 60px 15px;
+  }
+
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-box img {
+    width: 85%;
+    height: auto;
+  }
+
+  .skill-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-details {
+    text-align: center;
+  }
+
+  .info-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-icon {
+    margin-bottom: 10px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .project-image-wrapper {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .project-image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+  }
+
+  .project-details {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .tech-stack {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 /* animasi daun */
 @keyframes fall {
   0% {

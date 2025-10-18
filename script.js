@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // const menuIcon = document.getElementById('menu');
+  // const navLinks = document.querySelector('nav');
+
+  // menuIcon.addEventListener('click', () => {
+  //   navLinks.classList.toggle('nav-active');
+  // })
+
   // FALLING LEAF
   function createLeaf() {
     const leaf = document.createElement('div');
