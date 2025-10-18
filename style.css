@@ -754,7 +754,13 @@ nav a:hover {
 
   .project-actions {
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .project-actions .button {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    min-width: 110px;
   }
 }
 
