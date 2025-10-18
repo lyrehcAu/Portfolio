@@ -13,11 +13,11 @@
 </head>
 <body>
     <header>
-        <div class="header-box">
+        <!-- <div class="header-box"> -->
             <div class="logo">
                 <a href="#home">CherylAu</a>
             </div>
-            <div class="menu" id="menu"><img src="Assets/menu.png"></div>
+            <!-- <div class="menu" id="menu"><img src="Assets/menu.png"></div> -->
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -25,7 +25,7 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
-        </div>
+        <!-- </div> -->
     </header>
     
     <main>
@@ -36,241 +36,261 @@
             <p class="home-subtitle tagline">
                 Building technology with purpose, impact, and people in mind
             </p>
-            <div class="learn-more-button">
-                <a href="#about">Learn More About Me</a>
+            <div class="home-buttons">
+                <a class="button" href="#about">Learn More</a>
+                <a class="button" href="Assets/Cheryl's CV.pdf" target="_blank"><img src="Assets/pop.png">My Resume</a>
             </div>
         </section>
-        <section id="about">
-            <h1 class="section-title">About Me</h1>
-            <div class="about-box">
-                <img class="my-pic" src="Assets/Cheryl.jpg" alt="Cheryl's Picture">
-                <div class="about-me">
-                    <p>
-                        I’m a 5th-semester Computer Science undergraduate at BINUS University, specializing in Software Engineering and serving as the General Treasurer of HIMTI. I have a strong interest in UI/UX design and web development, with experience designing prototypes in Figma and building academic projects that apply technology to real-world needs.
-                    </p>
-                    <p>
-                        My experience includes creating platforms for healthcare support and student opportunities. I’ve also been awarded consecutive scholarships and have taken on roles as a Discrete Mathematics Tutor and Academic Mentor, where I supported peers in mastering coursework.
-                    </p>
-                    <a class="button" href="Assets/Cheryl's CV.pdf" target="_blank"><img src="Assets/pop.png">My Resume</a>
-                </div>
-            </div>
-        </section>
-            
-        <section id="skills">
-            <h1 class="section-title">My Skills</h1>
-            <div class="container">
-                <div class="skill">
-                    <div class="skill-main">
-                        <span class="skill-name">Teamwork & Collaboration</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" data-level="90%"></div>
-                        </div>
-                        <span class="skill-level">90%</span>
-                    </div>
-                    <p class="skill-explanation">
-                        Experienced in coordinating across multiple regional branches of a student organization.
-                    </p>
-                </div>
-                <div class="skill">
-                    <div class="skill-main">
-                        <span class="skill-name">Problem Solving</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" data-level="85%"></div>
-                        </div>
-                        <span class="skill-level">85%</span>
-                    </div>
-                    <p class="skill-explanation">
-                        Applied in tutoring Discrete Mathematics and mentoring peers in mastering coursework.
-                    </p>
-                </div>
-                
-                <div class="skill">
-                    <div class="skill-main">
-                        <span class="skill-name">UI/UX Design (Figma)</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" data-level="90%"></div>
-                        </div>
-                        <span class="skill-level">90%</span>
-                    </div>
-                    <p class="skill-explanation">
-                        Skilled in designing user-friendly and structured interfaces using Figma.
-                    </p>
-                </div>
+        <div class="inside">
 
-                <div class="tech-skills">
-                    <h3>Technical Proficiencies</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <img src="Assets/c.png" alt="C language icon">
-                            <span>C</span>
-                        </div>
-                        <div class="tech-item">
-                            <img src="Assets/java.png" alt="Java icon">
-                            <span>Java</span>
-                        </div>
-                        <div class="tech-item">
-                            <img src="Assets/html.png" alt="HTML icon">
-                            <span>HTML</span>
-                        </div>
-                        <div class="tech-item">
-                            <img src="Assets/css.png" alt="CSS icon">
-                            <span>CSS</span>
-                        </div>
-                        <div class="tech-item">
-                            <img src="Assets/laravel.png" alt="Laravel icon">
-                            <span>Laravel</span>
-                        </div>
+            <section id="about">
+                <div class="section-header">
+                    <div class="section-logo">
+                        <span>👩🏻</span>
+                    </div>
+                    <h1 class="section-title">About Me</h1>
+                    <p>A little bit about my background, passions, and journey into tech.</p>
+                </div>
+                <div class="about-box">
+                    <img class="my-pic" src="Assets/Cheryl.jpg" alt="Cheryl's Picture">
+                    <div class="about-me">
+                        <p>
+                            I'm a 5th-semester Computer Science undergraduate at BINUS University, specializing in Software Engineering and serving as the General Treasurer of HIMTI. I have a strong interest in UI/UX design and web development, with experience designing prototypes in Figma and building academic projects that apply technology to real-world needs.
+                        </p>
+                        <p>
+                            My experience includes creating platforms for healthcare support and student opportunities. I've also been awarded consecutive scholarships and have taken on roles as a Discrete Mathematics Tutor and Academic Mentor, where I supported peers in mastering coursework.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="projects">
-            <h1 class="section-title">My Projects</h1>    
-            <div class="container">
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="Assets/DiamondCutMotors.png" alt="DiamondCut Motors Project Screenshot">
-                        <span class="badge featured">HCI Project</span>
-                    </div>
-                    <div class="project-details">
-                        <span class="project-category">● UI/UX & Frontend</span>
-                        <h3>DiamondCut Motors</h3>
-                        <p>A luxury car e-commerce website with a user-friendly interface. Designed and developed to enhance the user experience with features like a showroom locator.</p>
-                        <div class="tech-stack">
-                            <span class="tech-pill">UI/UX Design</span>
-                            <span class="tech-pill">HTML</span>
-                            <span class="tech-pill">CSS</span>
-                            <span class="tech-pill">JavaScript</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://diamond-cut-motors.vercel.app/" class="button first" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/pop.png" alt="pop"> View Project
-                            </a>
-                            <a href="https://github.com/lyrehcAu/Diamond-Cut-Motors-Project" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            </section>
                 
-                <div class="project-card reverse">
-                    <div class="project-details">
-                        <span class="project-category">● UI/UX Design</span>
-                        <h3>ANCARE</h3>
-                        <p>A mobile app prototype providing a one-stop solution for pet owners, offering vet consultations, pet supplies, and trusted daycare and grooming recommendations.</p>
-                        <div class="tech-stack">
-                            <span class="tech-pill">Figma</span>
-                            <span class="tech-pill">Prototyping</span>
-                            <span class="tech-pill">User Research</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/lyrehcAu/ANCARE-UIUX/tree/main" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
-                            </a>
-                        </div>
+            <section id="skills">
+                <div class="section-header">
+                    <div class="section-logo">
+                        <span>⚙️</span>
                     </div>
-                    <div class="project-image-wrapper">
-                        <img src="Assets/ANCARE.png" alt="ANCARE Project Screenshot">
-                        <span class="badge featured">HCI Project</span>
+                    <h1 class="section-title">My Skills</h1>
+                    <p>A look at the technologies, tools, and abilities I bring to the table.</p>
+                </div>
+                <div class="container">
+                    <div class="skill">
+                        <div class="skill-main">
+                            <span class="skill-name">Teamwork & Collaboration</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-level="90%"></div>
+                            </div>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <p class="skill-explanation">
+                            Experienced in coordinating across multiple regional branches of a student organization.
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-main">
+                            <span class="skill-name">Problem Solving</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-level="85%"></div>
+                            </div>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <p class="skill-explanation">
+                            Applied in tutoring Discrete Mathematics and mentoring peers in mastering coursework.
+                        </p>
+                    </div>
+                    
+                    <div class="skill">
+                        <div class="skill-main">
+                            <span class="skill-name">UI/UX Design (Figma)</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-level="90%"></div>
+                            </div>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <p class="skill-explanation">
+                            Skilled in designing user-friendly and structured interfaces using Figma.
+                        </p>
+                    </div>
+    
+                    <div class="tech-skills">
+                        <h3>Technical Proficiencies</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <img src="Assets/c.png" alt="C language icon">
+                                <span>C</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="Assets/java.png" alt="Java icon">
+                                <span>Java</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="Assets/html.png" alt="HTML icon">
+                                <span>HTML</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="Assets/css.png" alt="CSS icon">
+                                <span>CSS</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="Assets/js.png" alt="JavaScript icon">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="Assets/laravel.png" alt="Laravel icon">
+                                <span>Laravel</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section id="projects">
+                <div class="section-header">
+                    <div class="section-logo">
+                        <span>🚀</span>
+                    </div>
+                    <h1 class="section-title">My Projects</h1>
+                    <p>Here are a few projects I've worked on. Feel free to take a look!</p>
+                </div>    
+                <div class="container">
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="Assets/DiamondCutMotors.png" alt="DiamondCut Motors Project Screenshot">
+                            <span class="badge featured">Completed</span>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">● UI/UX & Frontend</span>
+                            <h3>DiamondCut Motors</h3>
+                            <p>A luxury car e-commerce website with a user-friendly interface. Designed and developed to enhance the user experience with features like a showroom locator.</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">UI/UX Design</span>
+                                <span class="tech-pill">HTML</span>
+                                <span class="tech-pill">CSS</span>
+                                <span class="tech-pill">JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://diamond-cut-motors.vercel.app/" class="button first" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/pop.png" alt="pop"> View Project
+                                </a>
+                                <a href="https://github.com/lyrehcAu/Diamond-Cut-Motors-Project" class="button secondary" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="Assets/ANCARE.png" alt="ANCARE Project Screenshot">
+                            <span class="badge featured">Completed</span>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">● UI/UX Design</span>
+                            <h3>ANCARE</h3>
+                            <p>A mobile app prototype providing a one-stop solution for pet owners, offering vet consultations, pet supplies, and trusted daycare and grooming recommendations.</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Figma</span>
+                                <span class="tech-pill">Prototyping</span>
+                                <span class="tech-pill">User Research</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/lyrehcAu/ANCARE-UIUX/tree/main" class="button secondary" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="Assets/Heart Disease Prediction.png" alt="Heart Disease Prediction Project Screenshot">
+                            <span class="badge featured">Completed</span>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">● Machine Learning</span>
+                            <h3>Heart Disease Prediction</h3>
+                            <p>A system developed with the Random Forest algorithm that allows users to input health data to predict the likelihood of heart disease, supporting early detection.</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Streamlit</span>
+                                <span class="tech-pill">Machine Learning</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://heart-disease-prediction-app-5cs9xb8j5unod9swrpzej7.streamlit.app/" class="button first" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/pop.png" alt="pop"> View Project
+                                </a>
+                                <a href="https://github.com/lyrehcAu/Heart-Disease-Prediction-Streamlit" class="button secondary" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="Assets/NextStep.png" alt="NEXTSTEP Project Screenshot">
+                            <span class="badge featured">Completed</span>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">● Full-Stack Development</span>
+                            <h3>NEXTSTEP</h3>
+                            <p>A platform connecting students with reliable scholarship and internship opportunities, featuring application tracking and a student discussion forum.</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">HTML</span>
+                                <span class="tech-pill">CSS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://nextstep-chi.vercel.app/" class="button first" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/pop.png" alt="pop"> View Project
+                                </a>
+                                <a href="https://github.com/Zaneforce/NextStep" class="button secondary" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>    
+                    <!-- <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="" alt="">
+                            <span class="badge featured">On Progress</span>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">● Full-Stack Development</span>
+                            <h3>AnakKost</h3>
+                            <p>A platform connecting students with reliable scholarship and internship opportunities, featuring application tracking and a student discussion forum.</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Laravel</span>
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">HTML</span>
+                                <span class="tech-pill">CSS</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Blade</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://nextstep-chi.vercel.app/" class="button first" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/pop.png" alt="pop"> View Project
+                                </a>
+                                <a href="https://github.com/Zaneforce/NextStep" class="button secondary" target="_blank" rel="noopener noreferrer">
+                                    <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>     -->
+                </div>    
                 
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="Assets/Heart Disease Prediction.png" alt="Heart Disease Prediction Project Screenshot">
-                        <span class="badge featured">AI Project</span>
+            </section>
+            <section id="contact">
+                <div class="section-header">
+                    <div class="section-logo">
+                        <span>✉️</span>
                     </div>
-                    <div class="project-details">
-                        <span class="project-category">● Machine Learning</span>
-                        <h3>Heart Disease Prediction</h3>
-                        <p>A system developed with the Random Forest algorithm that allows users to input health data to predict the likelihood of heart disease, supporting early detection.</p>
-                        <div class="tech-stack">
-                            <span class="tech-pill">Python</span>
-                            <span class="tech-pill">Streamlit</span>
-                            <span class="tech-pill">Machine Learning</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://heart-disease-prediction-app-5cs9xb8j5unod9swrpzej7.streamlit.app/" class="button first" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/pop.png" alt="pop"> View Project
-                            </a>
-                            <a href="https://github.com/lyrehcAu/Heart-Disease-Prediction-Streamlit" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card reverse">
-                    <div class="project-details">
-                        <span class="project-category">● Full-Stack Development</span>
-                        <h3>NEXTSTEP</h3>
-                        <p>A platform connecting students with reliable scholarship and internship opportunities, featuring application tracking and a student discussion forum.</p>
-                        <div class="tech-stack">
-                            <span class="tech-pill">Laravel</span>
-                            <span class="tech-pill">PHP</span>
-                            <span class="tech-pill">MySQL</span>
-                            <span class="tech-pill">JavaScript</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://nextstep-chi.vercel.app/" class="button first" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/pop.png" alt="pop"> View Project
-                            </a>
-                            <a href="https://github.com/Zaneforce/NextStep" class="button secondary" target="_blank" rel="noopener noreferrer">
-                                <img src="Assets/GitHub2.png" alt="GitHub icon"> Source Code
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image-wrapper">
-                        <img src="Assets/NextStep.png" alt="NEXTSTEP Project Screenshot">
-                        <span class="badge featured">Full-Stack</span>
-                    </div>
+                    <h1 class="section-title">Let's Connect</h1>
+                    <p>Ready to see your project come to life? Let's connect and create something that makes an impact.</p>
                 </div>
     
-                <a class="button" href="https://github.com/lyrehcAu" target="_blank"><img src="Assets/GitHub.png" alt="GitHub Logo">GitHub</a>
-            </div>    
-            
-        </section>
-        <section id="contact">
-            <div class="contact-header">
-                <div class="contact-logo">
-                    <span>✉️</span>
-                </div>
-                <h1 class="section-title">Let's Connect</h1>
-                <p>Ready to see your project come to life? Let's connect and create something that makes an impact.</p>
-            </div>
-
-            <div class="contact-container">
-                <div class="contact-form">
-                    <h2>Share Your Vision</h2>
-                    <form action="https://formsubmit.co/aurl.cheryl@gmail.com" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What's the topic?" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Story</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project and how I can help..."></textarea>
-                        </div>
-                        <button type="submit" class="button">Send Your Message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <h2>Other Paths</h2>
-                    <p>Choose the connection that feels most natural.</p>
-                    
+                <div class="contact-container">                       
                     <div class="info-card">
-                        <div class="info-icon"><img src="Assets/email.png"></div>
+                        <div class="info-icon"><img src="Assets/Brown-email2.png"></div>
                         <div class="info-text">
                             <h3>Email</h3>
                             <a href="mailto:aurl.cheryl@gmail.com">aurl.cheryl@gmail.com</a>
@@ -279,29 +299,29 @@
                     </div>
 
                     <div class="info-card">
-                         <div class="info-icon">
-                            <img src="Assets/linkedin-logo.png" alt="LinkedIn Logo">
+                            <div class="info-icon">
+                            <img src="Assets/Brown-linkedin2.png" alt="LinkedIn Logo">
                         </div>
                         <div class="info-text">
                             <h3>LinkedIn</h3>
                             <a href="https://www.linkedin.com/in/cherylaureliachristy/" target="_blank">Cheryl Aurelia Christy</a>
-                             <p>Connect with me professionally</p>
+                                <p>Connect with me professionally</p>
                         </div>
                     </div>
 
                     <div class="info-card">
-                         <div class="info-icon">
-                            <img src="Assets/instagram.png" alt="Instagram Logo">
+                            <div class="info-icon">
+                            <img src="Assets/Brown-instagram.png" alt="Instagram Logo">
                         </div>
                         <div class="info-text">
                             <h3>Instagram</h3>
                             <a href="https://www.instagram.com/cheryl.aurl/" target="_blank">cheryl.aurl</a>
-                             <p>Get to know me beyond the projects</p>
+                                <p>Get to know me beyond the projects</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </body>
 </html>

@@ -33,6 +33,9 @@ h1 {
 
 /* HEADER */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 150px;
     position: fixed;
     width: 100%;
@@ -40,26 +43,39 @@ header {
     left: 0;
     z-index: 1000;
     background-color: transparent;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
     box-sizing: border-box;
+    transition: all 0.4s ease;
 }
 
-.header-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* .header-box {
+} */
 
-}
 
-.header-box.scrolled {
-    /* background-color: #fffffe; */
-    width: fit-content;
-    backdrop-filter: blur(10px);
-}
 
 header.scrolled {
-    /* background-color: #fffffe;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); */
+    /* --- Shrink and Center --- */
+    width: fit-content; /* Shrink to the width of the content */
+    left: 50%; /* Position the left edge at the center of the screen */
+    transform: translateX(-50%); /* Pull it back by half its width to center it */
+    margin-top: 15px; /* Add some space from the top */
+
+    /* --- Styling --- */
+    background-color: rgba(255, 249, 236, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 50px; /* Pill shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px 20px; /* Reduce padding to make it smaller */
+}
+
+header.scrolled nav {
+    gap: 0px;
+}
+
+header.scrolled .logo{
+    opacity: 0;
+    width: 0;
+    margin-left: 0;
+    pointer-events: none; 
 }
 
 .logo a {
@@ -71,12 +87,14 @@ header.scrolled {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; 
+    padding: 0px 20px;
 }
 
 nav {
     display: flex;
     gap: 25px;
 }
+
 
 nav a {
     display: flex;
@@ -111,14 +129,7 @@ nav a:hover {
 #home {
     background-color: #f9e1b8;
     padding-top: 70px;
-    /* margin-bottom: px; */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .home-title {
@@ -135,45 +146,20 @@ nav a:hover {
     font-size: 1.25rem;
 }
 
-.learn-more-button {
+.inside {
+    max-width: 1260px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#home, #about, #skills, #projects, #contact {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    background-image: linear-gradient(to right, #fe9901, #fb2d36);
-    font-size: 1.25rem;
-    height: 7vh;
-    width: 17%;
-    border-radius: 50px;
-    transition: transform 0.2s ease;
-
-    position: relative; /* relative jadi wadah untuk absolute */
-    overflow: hidden;   /* tidak tumpah ke luar button */
-}
-
-.learn-more-button a {
-  position: relative; /* untuk pake z */
-  z-index: 2; /* lebih tinggi */
-}
-
-.learn-more-button:hover{
-    transform: scale(1.10);
-}
-
-.sparkle {
-    position: absolute;
-    font-size: 1.1rem; /* ukuran sparkle */
-    animation: sparkle-animation 2s forwards;
-    z-index: 1; /* lebih rendah */
-}
-
-#about, #skills, #projects{
-    display: flex;
-    min-height: 70vh;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 10vh;
+    justify-content: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -210,6 +196,12 @@ nav a:hover {
 .about-me p {
     font-size: clamp(1rem, 1vw, 1.1rem);
     line-height: 2;
+    text-align: justify;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -217,16 +209,19 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to right, #fe9901, #fb2d36);
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 12px 24px;
     border-radius: 50px;
     transition: transform 0.2s ease;
     color: #fff9ec;;
     cursor: pointer;
+    margin-top: 15px;
+    margin: 10px;
+    margin-left: 0px;
 }
 
 .button:hover {
-    transform: translateY(-2px);
+    transform: scale(1.10);
 }
 
 .button img {
@@ -238,7 +233,7 @@ nav a:hover {
 .container {
     margin-top: 20px;
     width: 100%;
-    max-width: 1220px;
+    /* max-width: 1220px; */
 }
 
 .skill {
@@ -402,7 +397,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .tech-pill {
@@ -456,38 +451,23 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-.project-card.reverse {
-    flex-direction: row-reverse; 
-}
-
-#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-.contact-header {
+.section-header {
     text-align: center;
-    margin-bottom: 50px;
     max-width: 800px;
 }
 
-.contact-header .section-title {
+.section-header .section-title {
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.contact-header > p {
+.section-header > p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #bb4d00;
 }
 
-.contact-logo {
+.section-logo {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -503,72 +483,19 @@ nav a:hover {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 40px;
-    width: 100%;
-    max-width: 1220px;
-}
-
-.contact-form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-}
-
-.contact-form h2, .contact-info h2 {
-    font-size: 1.8rem;
-    color: #973c00;
-    margin-top: 0;
-}
-
-.form-row {
-    display: flex;
+    grid-template-columns: 1fr;
     gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    flex: 1; 
-}
-
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-.form-group input, .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #fdd7a8;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
-    background-color: #fff9ec;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #fe9901;
-    box-shadow: 0 0 0 3px rgba(254, 153, 1, 0.2);
-}
-
-.contact-form .button {
+/* .button {
     width: 100%;
     padding: 15px;
     font-size: 1.1rem;
     border: none;
-}
-
-.contact-info > p {
-    margin-top: -10px;
-    margin-bottom: 25px;
-}
+} */
 
 .info-card {
     display: flex;
@@ -596,7 +523,7 @@ nav a:hover {
 }
 
 .info-icon img {
-    height: 28px;
+    height: 30px;
     width: auto;
 }
 
@@ -620,6 +547,71 @@ nav a:hover {
 }
 .info-text a:hover {
     color: #fb2d36;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 2.5 rem;
+    }
+
+    header {
+        padding: 15px 40px;
+    }
+
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-me {
+        margin-left: 0;
+    }
+
+    .skill-explanation {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-details {
+        text-align: center;
+    }
+
+    .project-actions {
+        justify-content: center;
+    }
+
+    .contact-container {
+        gap: 20px;
+    }
+
+    .tech-stack {
+        justify-content: center;
+    }
+
+    .project-image-wrapper img {
+        width: 600px;
+        height: auto;
+    }
+
+    .home-buttons a {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+    }
+
+    .home-buttons img {
+        width: 20px;
+        height: auto;
+    }
 }
 
 /* animasi daun */
