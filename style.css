@@ -128,7 +128,8 @@ nav a:hover {
 
 /* HOME */
 #home {
-    background-color: #f9e1b8;
+    /* background-color: #f9e1b8; */
+    background: linear-gradient(180deg, #fedfad, #fffaf4);
     padding-top: 70px;
     text-align: center;
     overflow: hidden;
@@ -413,7 +414,6 @@ nav a:hover {
     border-radius: 15px;
     font-size: 0.85rem;
     white-space: nowrap; 
-    font-family: 'Poppins', sans-serif;
 }
 
 .project-actions {

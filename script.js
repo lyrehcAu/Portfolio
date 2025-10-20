@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
       leaf.classList.add('leaf');
 
       // RANDOMIZE EMOJI
-      const leafTypes =['🍂', '🍁', '🌸'];
+      const leafTypes =['🍁', '🌸'];
       leaf.innerHTML = leafTypes[Math.floor(Math.random() * leafTypes.length)];
 
       // RANDOMIZE HORIZ POSITION
       leaf.style.left = Math.random() * homesection.offsetWidth + 'px';
       // RANDOMIZE ANIMATION DURATION (3-8 SEC)
-      leaf.style.animationDuration = 3 + Math.random() * 5 + 's';
+      leaf.style.animationDuration = 8 + 's';
       // RANDOMIZE SIZE (20-50PX)
       leaf.style.fontSize = 20 + Math.random() * 30 + 'px';
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(isHomeVisible()) {
       createLeaf();
     }
-  }, 500);
+  }, 2000);
 
   window.addEventListener('scroll', () => {
     if(!isHomeVisible()) {
