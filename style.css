@@ -755,7 +755,6 @@ nav a:hover {
   .project-actions {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     align-items: center;
     flex-wrap: nowrap; /* stay on one line */
     gap: 6px;
@@ -778,15 +777,6 @@ nav a:hover {
     height: 16px;
     width: 16px;
     margin-right: 5px;
-=======
-    gap: 8px;
-  }
-
-  .project-actions .button {
-    font-size: 0.8rem;
-    padding: 7px 14px;
-    min-width: 110px;
->>>>>>> 01374d0 (fix buttons on projects)
   }
 }
 
