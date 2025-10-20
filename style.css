@@ -25,10 +25,11 @@ h1 {
 }
 
 .leaf {
-  position: fixed;
+  position: absolute;
   top: -50px;
   animation: fall linear forwards;
   opacity: 0.9;
+  pointer-events: none;
 }
 
 /* HEADER */
@@ -130,6 +131,11 @@ nav a:hover {
     background-color: #f9e1b8;
     padding-top: 70px;
     text-align: center;
+    overflow: hidden;
+}
+
+.position {
+    z-index: 1;
 }
 
 .home-title {
