@@ -9,30 +9,52 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // FALLING LEAF
+  const homesection = document.querySelector('#home');
   function createLeaf() {
-    const leaf = document.createElement('div');
-    leaf.classList.add('leaf');
-    
-    // Choose randomly between 2 kinds of leaves
-    const leafTypes = ['🍂', '🍁', '🌸']; // you can replace with <img src="leaf1.png">, etc.
-    leaf.innerHTML = leafTypes[Math.floor(Math.random() * leafTypes.length)];
-    
-    // Randomize position, size, and duration
-    leaf.style.left = Math.random() * window.innerWidth + 'px';
-    leaf.style.animationDuration = 3 + Math.random() * 5 + 's';
-    leaf.style.fontSize = 20 + Math.random() * 30 + 'px';
-    
-    document.body.appendChild(leaf);
-    
-    // Remove leaf after animation ends
-    setTimeout(() => {
-      leaf.remove();
-    }, 10000);
+    const rect = homesection.getBoundingClientRect();
+
+    if(rect.top < window.innerHeight && rect.bottom > 0) {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+
+      // RANDOMIZE EMOJI
+      const leafTypes =['🍂', '🍁', '🌸'];
+      leaf.innerHTML = leafTypes[Math.floor(Math.random() * leafTypes.length)];
+
+      // RANDOMIZE HORIZ POSITION
+      leaf.style.left = Math.random() * homesection.offsetWidth + 'px';
+      // RANDOMIZE ANIMATION DURATION (3-8 SEC)
+      leaf.style.animationDuration = 3 + Math.random() * 5 + 's';
+      // RANDOMIZE SIZE (20-50PX)
+      leaf.style.fontSize = 20 + Math.random() * 30 + 'px';
+
+      // APPEND ONLY INSIDE HOME SECTION
+      homesection.appendChild(leaf);
+      
+      // REMOVE LEAF AFTER 10 SECONDS
+      setTimeout(() => {
+        leaf.remove()
+      }, 10000);
+    }
+  }
+  
+  function isHomeVisible() {
+    const rect = homesection.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0
   }
 
-  // Keep generating leaves
-  setInterval(createLeaf, 500);
+  // CREATE NEW LEAF EVERY 500MS
+  const leafInterval = setInterval(() => {
+    if(isHomeVisible()) {
+      createLeaf();
+    }
+  }, 500);
 
+  window.addEventListener('scroll', () => {
+    if(!isHomeVisible()) {
+      document.querySelectorAll('.leaf').forEach(leaf => leaf.remove);
+    }
+  })
 
   // SKILLS
   const skillsSection = document.querySelector("#skills");
@@ -40,22 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // If the skills section is on screen
       if (entry.isIntersecting) {
         skillBars.forEach(bar => {
-          // Get the skill level from the data-level attribute
           const level = bar.getAttribute("data-level");
-          // Set the width to trigger the CSS transition
           bar.style.width = level;
         });
-        // Stop observing once the animation has been triggered
         observer.unobserve(skillsSection);
       }
     });
   }, {
-    threshold: 0.3 // Trigger when 30% of the section is visible
+    threshold: 0.3
   });
   
-  // Start observing the skills section
   observer.observe(skillsSection);
 });
